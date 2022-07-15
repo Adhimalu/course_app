@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵsetAllowDuplicateNgModuleIdsForTest } from '@angular/core';
 
 @Component({
   selector: 'app-addcourse',
@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addcourse.component.css']
 })
 export class AddcourseComponent implements OnInit {
-
+course={courseTitle:"",
+courseDescription:"",
+courseDate:"",
+courseVenue:"",
+courseDuration:"",
+}
   constructor() { }
 
   ngOnInit(): void {
   }
-
+AddCourse(){
+  console.log(this.course);
+  alert("Success");
+}
 }
